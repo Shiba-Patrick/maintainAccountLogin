@@ -1,0 +1,32 @@
+<div class="container mt-3">
+  <div class="row mb-3">
+    <h1 class="text-center">
+      <a href="/" style="text-decoration: none">Account Login</a>
+    </h1>
+  </div>
+  <div class="row">
+    <div class="col-4 mx-auto">
+      <form action="/" method="POST">
+        <!--email form-->
+        <div class="mb-3">
+          <label for="email" class="form-label">email address</label>
+          <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp"
+            placeholder="Please input your email">
+        </div>
+        <!--password form-->
+        <div class="mb-3">
+          <label for="password" class="form-label">password</label>
+          <input type="password" class="form-control" id="password" name="password" aria-describedby="passwordHelp"
+            placeholder="Please input your password">
+        </div>
+        <div id="passwordHelp" class="form-text text-danger">{{#if this.fail}}wrong email or not sign up{{/if}}</div>
+        <div id="passwordHelp" class="form-text text-danger">{{#if this.noCookie}}Pleas log in your account!{{/if}}
+        </div>
+        <!--Login button-->
+        <div class="text-center">
+          <button type="submit" class="btn btn-outline-info btn-lg mt-4">Login</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
